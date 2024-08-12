@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="drone_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.22933 -0.047325 0.32585"
+        rpy="0 0 0" />
+      <mass
+        value="0.075316" />
+      <inertia
+        ixx="3.199E-05"
+        ixy="9.4555E-06"
+        ixz="7.28E-06"
+        iyy="3.8566E-05"
+        iyz="6.4826E-06"
+        izz="5.1988E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.00344655828794099 0.0295272609946485 0.00249371751803434"
+        rpy="0 0 0" />
+      <mass
+        value="0.000916817465364918" />
+      <inertia
+        ixx="3.31093966645169E-07"
+        ixy="2.89753377129769E-08"
+        ixz="-1.12366763520245E-07"
+        iyy="5.02209939780366E-07"
+        iyz="1.95786019627078E-08"
+        izz="1.81490268638992E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="propeller_1"
+    type="revolute">
+    <origin
+      xyz="-0.26783 0.065405 0.26788"
+      rpy="2.2976 0.029001 2.1317" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0.16776 0.98583 1.5029E-05" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.0063232246271604 0.00298191709067125 -0.00459013776990662"
+        rpy="0 0 0" />
+      <mass
+        value="0.000916900513768312" />
+      <inertia
+        ixx="4.91222974554422E-07"
+        ixy="2.95354426347088E-09"
+        ixz="5.95144519639976E-08"
+        iyy="5.06463827705564E-07"
+        iyz="-1.00689469577819E-08"
+        izz="1.71745570553114E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="propeller_2"
+    type="revolute">
+    <origin
+      xyz="-0.34097 -0.059518 0.39988"
+      rpy="1.8324 -0.60259 -2.965" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0.16776 0.98583 1.5029E-05" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.00517123368880112 -0.00278858176405623 -0.00478850904181459"
+        rpy="0 0 0" />
+      <mass
+        value="0.000916876030822966" />
+      <inertia
+        ixx="4.99833821078108E-07"
+        ixy="1.39310458754429E-09"
+        ixz="-3.89021698417036E-08"
+        iyy="5.06727369502954E-07"
+        iyz="8.81931682124519E-09"
+        izz="8.26498173119016E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="propeller_3"
+    type="revolute">
+    <origin
+      xyz="-0.124602663337415 -5.69311707367523E-05 0.258306010014126"
+      rpy="-1.95936528115515 0.847293975509765 0.24773775116358" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0.16775794509839 0.985828216085593 1.50287371735724E-05" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.012387873274163 0.0541808207049662 -0.00438032099966734"
+        rpy="0 0 0" />
+      <mass
+        value="0.000916951821287997" />
+      <inertia
+        ixx="5.06003153111362E-07"
+        ixy="1.52660988085531E-10"
+        ixz="-3.39387037748263E-09"
+        iyy="5.06965866907931E-07"
+        iyz="5.8412028748047E-10"
+        izz="1.84731651376509E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://drone_urdf/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="propeller_4"
+    type="revolute">
+    <origin
+      xyz="-0.22567 -0.18251 0.33974"
+      rpy="1.9773 0.12177 1.6732" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0.16776 0.98583 1.5029E-05" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
